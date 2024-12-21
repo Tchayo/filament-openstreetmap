@@ -84,6 +84,7 @@ function GetPointMap(id: string, lat: number = 0, lon: number = 0, zoom: number 
         placeholder: 'Search...',
         limit: 5,
         keepOpen: true,
+        targetType: 'text-input'
     })
     map.addControl(geocoder)
     try {
@@ -107,9 +108,9 @@ function GetPointMap(id: string, lat: number = 0, lon: number = 0, zoom: number 
     }
 
     function updateCenter() {
-        // Получаем новые координаты центра карты
+        // We get new coordinates of the map center
         const [lat, lon] = map.getView().getCenter()
-        // Обновляем координаты точки
+        // Update point coordinates
         point.getGeometry().setCoordinates([lat, lon])
     }
 
