@@ -127,7 +127,7 @@ function GetPointMap(id: string, lat: number = 0, lon: number = 0, zoom: number 
             // simpleReverseGeocoding(lon, lat);
 
             // application specific
-            view.setCenter(fromLonLat([parseFloat(lon), parseFloat(lat)], projection))
+            view.setCenter(fromLonLat([parseFloat(lat), parseFloat(lon)], projection))
 
             const feature = map.forEachFeatureAtPixel(evt.pixel, function (feature) {
                 return feature;
