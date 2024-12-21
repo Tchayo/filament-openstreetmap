@@ -118,16 +118,14 @@ function GetPointMap(id: string, lat: number = 0, lon: number = 0, zoom: number 
     try{
         map.on('click', function(evt: any) {
             console.log("event >>>> ", evt);
-            const coordinate = toLonLat(evt.coordinate).map(function (val) {
-                return val.toFixed(6)
-            });
+            const coordinate = evt.coordinate as Coordinate
 
             const lon = coordinate[0]
             const lat = coordinate[1]
             // simpleReverseGeocoding(lon, lat);
 
             // application specific
-            view.setCenter(fromLonLat([parseFloat(lat), parseFloat(lon)], projection))
+            view.setCenter(fromLonLat([lon, lat], projection))
 
             const feature = map.forEachFeatureAtPixel(evt.pixel, function (feature) {
                 return feature;
