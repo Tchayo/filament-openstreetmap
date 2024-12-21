@@ -81,7 +81,7 @@ function GetPointMap(id: string, lat: number = 0, lon: number = 0, zoom: number 
     const geocoder = new Geocoder('nominatim', {
         provider: 'osm',
         lang: lang, //en-US, fr-FR
-        placeholder: 'Поиск...',
+        placeholder: 'Search...',
         limit: 5,
         keepOpen: true,
     })
