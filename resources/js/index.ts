@@ -116,26 +116,35 @@ function GetPointMap(id: string, lat: number = 0, lon: number = 0, zoom: number 
     }
 
     try{
-        map.on('click', function(e: any) {
-            console.log("event >>>> ", e);
-            const coordinate = toLonLat(e.coordinate).map(function (val) {
+        map.on('click', function(evt: any) {
+            console.log("event >>>> ", evt);
+            const coordinate = toLonLat(evt.coordinate).map(function (val) {
                 return val.toFixed(6)
-            })
+            });
+
             const lon = coordinate[0]
             const lat = coordinate[1]
             // simpleReverseGeocoding(lon, lat);
 
-            const feature = e.feature as Feature<Point>
-            feature.setStyle(new Style({
-                image: new Icon({
-                    color: 'rgba(0, 0, 0, 0)',
-                    crossOrigin: 'anonymous',
-                    src: 'https://openlayers.org/en/latest/examples/data/dot.png',
-                    scale: 0.01,
-                }),
-            }))
             // application specific
             view.setCenter(fromLonLat([parseFloat(lon), parseFloat(lat)], projection))
+
+            const feature = map.forEachFeatureAtPixel(evt.pixel, function (feature) {
+                return feature;
+            });
+
+            if (!feature) {
+                return;
+            }
+
+            // feature.setStyle(new Style({
+            //     image: new Icon({
+            //         color: 'rgba(0, 0, 0, 0)',
+            //         crossOrigin: 'anonymous',
+            //         src: 'https://openlayers.org/en/latest/examples/data/dot.png',
+            //         scale: 0.01,
+            //     }),
+            // }))
         });
     } catch (e) {
         console.error(e)
