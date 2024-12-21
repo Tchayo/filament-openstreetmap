@@ -117,6 +117,7 @@ function GetPointMap(id: string, lat: number = 0, lon: number = 0, zoom: number 
 
     try{
         map.on('click', function(e: any) {
+            console.log("event >>>> ", e);
             const coordinate = toLonLat(e.coordinate).map(function (val) {
                 return val.toFixed(6)
             })
