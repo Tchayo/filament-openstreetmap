@@ -1,14 +1,17 @@
 @import '../../node_modules/ol/ol.css';
-@import '../../node_modules/ol-geocoder/dist/ol-geocoder.min.css';
+@import './ol-geocoder.css';
 
 .open-street-map {
     position: relative;
+
     .gcd-txt-control {
         color: #09090b !important;
     }
-    &.disabled{
+
+    &.disabled {
         pointer-events: none;
-        .gcd-gl-control{
+
+        .gcd-gl-control {
             pointer-events: none;
         }
     }
