@@ -117,7 +117,6 @@ function GetPointMap(id: string, lat: number = 0, lon: number = 0, zoom: number 
 
     try{
         map.on('click', function(evt: any) {
-            console.log("event >>>> ", evt);
             const coordinate = evt.coordinate as Coordinate
 
             const lon = coordinate[0]
@@ -126,6 +125,8 @@ function GetPointMap(id: string, lat: number = 0, lon: number = 0, zoom: number 
 
             // application specific
             view.setCenter(fromLonLat([lon, lat], projection))
+            // update point coordinates
+            point.getGeometry().setCoordinates([lat, lon])
 
             const feature = map.forEachFeatureAtPixel(evt.pixel, function (feature) {
                 return feature;
