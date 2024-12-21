@@ -115,39 +115,39 @@ function GetPointMap(id: string, lat: number = 0, lon: number = 0, zoom: number 
         point.getGeometry().setCoordinates([lat, lon])
     }
 
-    try{
-        map.on('click', function(evt: any) {
-            const coordinate = evt.coordinate as Coordinate
-
-            const lon = coordinate[0]
-            const lat = coordinate[1]
-            // simpleReverseGeocoding(lon, lat);
-
-            // application specific
-            view.setCenter(fromLonLat([lon, lat], projection))
-            // update point coordinates
-            point.getGeometry().setCoordinates([lat, lon])
-
-            const feature = map.forEachFeatureAtPixel(evt.pixel, function (feature) {
-                return feature;
-            });
-
-            if (!feature) {
-                return;
-            }
-
-            // feature.setStyle(new Style({
-            //     image: new Icon({
-            //         color: 'rgba(0, 0, 0, 0)',
-            //         crossOrigin: 'anonymous',
-            //         src: 'https://openlayers.org/en/latest/examples/data/dot.png',
-            //         scale: 0.01,
-            //     }),
-            // }))
-        });
-    } catch (e) {
-        console.error(e)
-    }
+    // try{
+    //     map.on('click', function(evt: any) {
+    //         const coordinate = evt.coordinate as Coordinate
+    //
+    //         const lon = coordinate[0]
+    //         const lat = coordinate[1]
+    //         // simpleReverseGeocoding(lon, lat);
+    //
+    //         // application specific
+    //         view.setCenter(fromLonLat([lon, lat], projection))
+    //         // update point coordinates
+    //         point.getGeometry().setCoordinates([lat, lon])
+    //
+    //         const feature = map.forEachFeatureAtPixel(evt.pixel, function (feature) {
+    //             return feature;
+    //         });
+    //
+    //         if (!feature) {
+    //             return;
+    //         }
+    //
+    //         // feature.setStyle(new Style({
+    //         //     image: new Icon({
+    //         //         color: 'rgba(0, 0, 0, 0)',
+    //         //         crossOrigin: 'anonymous',
+    //         //         src: 'https://openlayers.org/en/latest/examples/data/dot.png',
+    //         //         scale: 0.01,
+    //         //     }),
+    //         // }))
+    //     });
+    // } catch (e) {
+    //     console.error(e)
+    // }
 
     try {
         map.on('movestart', updateCenter)
