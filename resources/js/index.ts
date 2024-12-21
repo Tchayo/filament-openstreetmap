@@ -6,7 +6,7 @@ import View from 'ol/View'
 import { Coordinate, createStringXY } from 'ol/coordinate'
 import { defaults as defaultControls } from 'ol/control'
 import { Feature } from 'ol'
-import { fromLonLat, ProjectionLike } from 'ol/proj'
+import { fromLonLat, ProjectionLike, toLonLat } from 'ol/proj'
 import VectorSource from 'ol/source/Vector'
 import VectorLayer from 'ol/layer/Vector'
 import { Point } from 'ol/geom'
@@ -87,6 +87,7 @@ function GetPointMap(id: string, lat: number = 0, lon: number = 0, zoom: number 
         targetType: 'text-input'
     })
     map.addControl(geocoder)
+
     try {
         geocoder.on('addresschosen', function(evt: any) {
             console.log(evt)
@@ -112,6 +113,31 @@ function GetPointMap(id: string, lat: number = 0, lon: number = 0, zoom: number 
         const [lat, lon] = map.getView().getCenter()
         // Update point coordinates
         point.getGeometry().setCoordinates([lat, lon])
+    }
+
+    try{
+        map.on('click', function(e: any) {
+            const coordinate = toLonLat(e.coordinate).map(function (val) {
+                return val.toFixed(6)
+            })
+            const lon = coordinate[0]
+            const lat = coordinate[1]
+            // simpleReverseGeocoding(lon, lat);
+
+            const feature = e.feature as Feature<Point>
+            feature.setStyle(new Style({
+                image: new Icon({
+                    color: 'rgba(0, 0, 0, 0)',
+                    crossOrigin: 'anonymous',
+                    src: 'https://openlayers.org/en/latest/examples/data/dot.png',
+                    scale: 0.01,
+                }),
+            }))
+            // application specific
+            view.setCenter(fromLonLat([parseFloat(lon), parseFloat(lat)], projection))
+        });
+    } catch (e) {
+        console.error(e)
     }
 
     try {
