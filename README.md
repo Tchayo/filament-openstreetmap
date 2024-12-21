@@ -1,8 +1,8 @@
 # This is filament-openstreetmap
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/traineratwot/filament-openstreetmap.svg?style=flat-square)](https://packagist.org/packages/traineratwot/filament-openstreetmap)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/tchayo/filament-openstreetmap.svg?style=flat-square)](https://packagist.org/packages/tchayo/filament-openstreetmap)
 
-[![Total Downloads](https://img.shields.io/packagist/dt/traineratwot/filament-openstreetmap.svg?style=flat-square)](https://packagist.org/packages/traineratwot/filament-openstreetmap)
+[![Total Downloads](https://img.shields.io/packagist/dt/tchayo/filament-openstreetmap.svg?style=flat-square)](https://packagist.org/packages/tchayo/filament-openstreetmap)
 
 
 
@@ -11,16 +11,16 @@
 **Full free map API**
 
 ## Interface
-![2024-01-19_09-54-03](https://github.com/Traineratwot/filament-openstreetmap/assets/41589091/fc0d847e-9d5a-4506-b445-d183b91f9198)
+![2024-01-19_09-54-03](https://github.com/Tchayo/filament-openstreetmap/assets/41589091/fc0d847e-9d5a-4506-b445-d183b91f9198)
 ## How it view in database
-![NVIDIA_Share_Yn8wCeCsJf](https://github.com/Traineratwot/filament-openstreetmap/assets/41589091/94c4a3f6-b75d-4fbc-87a1-cd02ffcde34a)
+![NVIDIA_Share_Yn8wCeCsJf](https://github.com/Tchayo/filament-openstreetmap/assets/41589091/94c4a3f6-b75d-4fbc-87a1-cd02ffcde34a)
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require traineratwot/filament-openstreetmap
+composer require tchayo/filament-openstreetmap
 ```
 
 
@@ -79,7 +79,7 @@ Make filament resource
 
 namespace App\Filament\Resources;
 
-use Traineratwot\FilamentOpenStreetMap\Forms\Components\MapInput;
+use Tchayo\FilamentOpenStreetMap\Forms\Components\MapInput;
 
 
 class MapPointResource extends Resource
@@ -134,7 +134,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [Traineratwot](https://github.com/Traineratwot)
+- [Tchayo](https://github.com/Tchayo)
 - [All Contributors](../../contributors)
 
 ## License

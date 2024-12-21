@@ -114,7 +114,7 @@
                     disabled = true
                 }
                 let point
-                if (typeof window.traineratwot !== 'undefined') {
+                if (typeof window.tchayo !== 'undefined') {
                     const input = document.getElementById('{{ $getId() }}')
                     const reset = document.getElementById('Reset-{{ $getId() }}')
                     const compare = () => {
@@ -133,7 +133,7 @@
                         }
                     }
                     if (!map.classList.contains('map-done')) {
-                        point = window.traineratwot.GetPointMap('{{ $getId() }}', {{  $startLat }}, {{ $startLon }}, {{ $zoom }}, '{{ $geoCoderLang }}')
+                        point = window.tchayo.GetPointMap('{{ $getId() }}', {{  $startLat }}, {{ $startLon }}, {{ $zoom }}, '{{ $geoCoderLang }}')
                         input.addEventListener('input', compare)
                         compare()
                         point.onChange(function(x, y) {

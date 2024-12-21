@@ -1,6 +1,6 @@
 <?php
 
-namespace Traineratwot\FilamentOpenStreetMap\Rules;
+namespace Tchayo\FilamentOpenStreetMap\Rules;
 
 use Closure;
 use Exception;

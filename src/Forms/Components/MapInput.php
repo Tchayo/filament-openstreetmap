@@ -2,13 +2,13 @@
 
 /** @noinspection ClassMethodNameMatchesFieldNameInspection */
 
-namespace Traineratwot\FilamentOpenStreetMap\Forms\Components;
+namespace Tchayo\FilamentOpenStreetMap\Forms\Components;
 
 use Closure;
 use Filament\Forms\Components\Textarea;
 use Illuminate\Support\Facades\Validator;
 use MatanYadaev\EloquentSpatial\Objects\Point;
-use Traineratwot\FilamentOpenStreetMap\Rules\GeoPoint;
+use Tchayo\FilamentOpenStreetMap\Rules\GeoPoint;
 
 class MapInput extends Textarea
 {

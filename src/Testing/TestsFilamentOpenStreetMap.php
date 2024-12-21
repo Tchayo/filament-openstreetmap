@@ -1,6 +1,6 @@
 <?php
 
-namespace Traineratwot\FilamentOpenStreetMap\Testing;
+namespace Tchayo\FilamentOpenStreetMap\Testing;
 
 use Livewire\Features\SupportTesting\Testable;
 

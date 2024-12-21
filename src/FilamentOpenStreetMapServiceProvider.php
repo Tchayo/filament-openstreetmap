@@ -2,7 +2,7 @@
 
 /** @noinspection PhpMultipleClassDeclarationsInspection */
 
-namespace Traineratwot\FilamentOpenStreetMap;
+namespace Tchayo\FilamentOpenStreetMap;
 
 use Filament\Support\Assets\Asset;
 use Filament\Support\Assets\Css;
@@ -14,7 +14,7 @@ use ReflectionException;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Traineratwot\FilamentOpenStreetMap\Testing\TestsFilamentOpenStreetMap;
+use Tchayo\FilamentOpenStreetMap\Testing\TestsFilamentOpenStreetMap;
 
 class FilamentOpenStreetMapServiceProvider extends PackageServiceProvider
 {
@@ -36,7 +36,7 @@ class FilamentOpenStreetMapServiceProvider extends PackageServiceProvider
                     ->publishConfigFile()
                     ->publishMigrations()
                     ->askToRunMigrations()
-                    ->askToStarRepoOnGitHub('traineratwot/filament-openstreetmap');
+                    ->askToStarRepoOnGitHub('tchayo/filament-openstreetmap');
             });
 
         $configFileName = $package->shortName();
@@ -87,7 +87,7 @@ class FilamentOpenStreetMapServiceProvider extends PackageServiceProvider
 
     protected function getAssetPackageName(): ?string
     {
-        return 'traineratwot/filament-openstreetmap';
+        return 'tchayo/filament-openstreetmap';
     }
 
     /**

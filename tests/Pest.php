@@ -1,5 +1,5 @@
 <?php
 
-use Traineratwot\FilamentOpenStreetMap\Tests\TestCase;
+use Tchayo\FilamentOpenStreetMap\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);

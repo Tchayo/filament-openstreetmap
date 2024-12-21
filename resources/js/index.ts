@@ -13,7 +13,7 @@ import { Point } from 'ol/geom'
 import Geocoder from 'ol-geocoder'
 import { Icon, Style } from 'ol/style'
 
-window['traineratwot'] = {}
+window['tchayo'] = {}
 
 
 class mPoint {
@@ -123,4 +123,4 @@ function GetPointMap(id: string, lat: number = 0, lon: number = 0, zoom: number 
     return new mPoint(view, projection)
 }
 
-window['traineratwot'].GetPointMap = GetPointMap
+window['tchayo'].GetPointMap = GetPointMap

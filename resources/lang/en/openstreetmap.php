@@ -1,6 +1,6 @@
 <?php
 
-// translations for Traineratwot/FilamentOpenStreetMap
+// translations for Tchayo/FilamentOpenStreetMap
 return [
     //
 ];

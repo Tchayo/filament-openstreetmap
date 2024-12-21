@@ -1,6 +1,6 @@
 <?php
 
-namespace Traineratwot\FilamentOpenStreetMap\Tests;
+namespace Tchayo\FilamentOpenStreetMap\Tests;
 
 use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
 use BladeUI\Icons\BladeIconsServiceProvider;
@@ -13,7 +13,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 use RyanChandler\BladeCaptureDirective\BladeCaptureDirectiveServiceProvider;
-use Traineratwot\FilamentOpenStreetMap\FilamentOpenStreetMapServiceProvider;
+use Tchayo\FilamentOpenStreetMap\FilamentOpenStreetMapServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -22,7 +22,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Traineratwot\\FilamentOpenStreetMap\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'Tchayo\\FilamentOpenStreetMap\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 

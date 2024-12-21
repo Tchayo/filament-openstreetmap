@@ -1,6 +1,6 @@
 <?php
 
-namespace Traineratwot\FilamentOpenStreetMap;
+namespace Tchayo\FilamentOpenStreetMap;
 
 class FilamentOpenStreetMap
 {

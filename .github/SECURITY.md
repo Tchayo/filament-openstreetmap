@@ -1,3 +1,3 @@
 # Security Policy
 
-If you discover any security related issues, please email traineratwot@yandex.ru instead of using the issue tracker.
+If you discover any security related issues, please email achayof@gmail.com instead of using the issue tracker.
