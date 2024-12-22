@@ -121,12 +121,12 @@ class MapInput extends Textarea
             ];
         }
         if (is_array($state)) {
-//            if (isset($state['type']) && $state['type'] === 'Point') {
-//                return [
-//                    'latitude' => $state['coordinates'][1],
-//                    'longitude' => $state['coordinates'][0],
-//                ];
-//            }
+            if (isset($state['type']) && $state['type'] === 'Point') {
+                return [
+                    'latitude' => $state['coordinates'][0],
+                    'longitude' => $state['coordinates'][1],
+                ];
+            }
 
             return [
                 'latitude' => (float) $state[0],
