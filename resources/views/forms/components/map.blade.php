@@ -146,13 +146,13 @@
                         })
 
                         reset.addEventListener('click', () => {
-                            input.value = '{{ $startLon }}, {{  $startLat }}'
+                            input.value = '{{  $startLat }}, {{ $startLon }}'
                             input.dispatchEvent(new Event('input'))
                             input.dispatchEvent(new Event('change'))
                             input.dispatchEvent(new Event('blur'))
                         })
                         if (disabled) {
-                            if (input.value !== '{{ $startLon }}, {{  $startLat }}') {
+                            if (input.value !== '{{  $startLat }}, {{ $startLon }}') {
                                 reset.click()
                                 compare()
                             }
