@@ -85,7 +85,7 @@ function GetPointMap(id: string, lat: number = 0, lon: number = 0, zoom: number 
         limit: 5,
         keepOpen: true,
         targetType: 'text-input',
-        geocode: 'countrycodes=ke'
+        geocodingQueryParams: { countrycodes: 'ke' }
     })
     map.addControl(geocoder)
 
